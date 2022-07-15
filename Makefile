@@ -9,11 +9,12 @@ compile: $(BUILD_DIR)
 
 assemble: compile
 	ca65 $(BUILD_DIR)/durango.s -o $(BUILD_DIR)/durango.o
+	
 makelib: assemble
 	ar65 r $(BUILD_DIR)/durango.lib $(BUILD_DIR)/durango.o
 
 $(BUILD_DIR):
-	mkdir -p bin
+	mkdir -p $(BUILD_DIR)
 clean:
 	rm -Rf bin/
 
