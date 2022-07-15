@@ -2,15 +2,15 @@ BUILD_DIR=bin
 SOURCE_DIR=src
 INCLUDE_DIRS=inc
 
-all: makelib
+all: $(BUILD_DIR)/durango.lib
 
 compile: $(BUILD_DIR)
 	cc65 $(SOURCE_DIR)/durango.c -I $(INCLUDE_DIRS) -o bin/durango.s
 
-assemble: compile
+$(BUILD_DIR)/durango.o: compile
 	ca65 $(BUILD_DIR)/durango.s -o $(BUILD_DIR)/durango.o
 	
-makelib: assemble
+$(BUILD_DIR)/durango.lib: $(BUILD_DIR)/durango.o
 	ar65 r $(BUILD_DIR)/durango.lib $(BUILD_DIR)/durango.o
 
 $(BUILD_DIR):
