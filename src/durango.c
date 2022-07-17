@@ -1,7 +1,16 @@
 
 #include "durango.h"
 
-void hello(){
+void initVideo(int mode){
 
-    int a=0;
+    switch (mode)
+    {
+    case HIGH_RES:
+        setHighRes();
+        break;
+    case COLOR:
+        setColor();
+        break;
+   
+    }
 }
