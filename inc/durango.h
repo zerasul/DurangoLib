@@ -3,6 +3,4 @@
 
 #include "video.h"
 
-void initVideo(int mode);
-
 #endif
