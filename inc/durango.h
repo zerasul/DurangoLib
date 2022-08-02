@@ -3,4 +3,6 @@
 
 #include "video.h"
 
+extern void __fastcall__ drawPixelPair(void*);
+
 #endif

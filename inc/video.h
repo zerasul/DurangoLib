@@ -12,6 +12,12 @@
 
 #define VIDEO_MEM (unsigned int*)0xdf80
 
-void setVideoMode(int mode);
+typedef struct{
+    unsigned char x, y, color;
+} pixel_pair;
+
+
+extern void __fastcall__ setVideoMode(char mode);
+
 
 #endif
