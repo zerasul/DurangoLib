@@ -38,7 +38,7 @@ $(BUILD_DIR)/:
 	mkdir -p $(BUILD_DIR)
 
 makeziplib: $(BUILD_DIR)/durango.lib
-	zip durangoLib.zip $(BUILD_DIR)/durango.lib $(BUILD_DIR)/sbc.lib $(INCLUDE_DIRS)/durango.h $(CFG_DIR)/durango.cfg $() $(BUILD_DIR)/vectors.o $(INCLUDE_DIRS)/video.h
+	zip durangoLib.zip $(BUILD_DIR)/durango.lib $(BUILD_DIR)/sbc.lib $(INCLUDE_DIRS)/durango.h $(CFG_DIR)/durango.cfg $(CFG_DIR)/durango16k.cfg $(BUILD_DIR)/vectors.o $(INCLUDE_DIRS)/video.h
 
 clean:
 	rm -Rf bin/ durangoLib.zip
